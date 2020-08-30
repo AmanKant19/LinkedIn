@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LinkedIn</title>
+
+
+
+  <style type="text/css">
+    #topbar{
+      margin:0 auto;
+      height: 52px;
+      background-color: #283E4A;
+      padding-left: 188px;
+      overflow: hidden;
+      z-index: 10;
+
+
+
+    }
+
+    .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+    body{
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #F5F5F5;
+    }
+
+    #logo{
+      margin:0;
+      width:50px;
+      float: left;
+    }
+
+    #search{
+        margin-top: 9px;
+        margin-left: 6px;
+        background-color: #E1E9EE;
+        border-style: none;
+        width: 275px;
+        height: 33px;
+        border-radius: 2px;
+        margin-right: 150px;
+    }
+
+    .topbar-section{
+      float: left;
+      height: 52px;
+    
+      text-align: center;
+      width: 75px;
+    }
+
+    .icon-name:hover{
+      color: white;
+      opacity: 1;
+    }
+
+    .topbar-item{
+      width: 28px;
+      margin-top: 8px;
+      
+     
+    }
+    .hover:hover{
+      color:white;
+    }
+
+    .vertical-line{
+      border-left: 1px;
+      border-style: solid;
+      height: 100%;
+    }
+    .icon-name{
+      margin-top: -5px;
+      padding: 0;
+      color: #B8C3CB;
+      font-size: 75%;
+      margin-bottom: 2px;
+      overflow: hidden;
+    }
+    .message{
+      margin-top: -7px;
+      padding: 0;
+      color: #B8C3CB;
+      font-size: 75%;
+      margin-bottom: 2px;
+     
+    }
+    .jobs{
+      margin-top: -4.5px;
+      padding: 0;
+      color: #B8C3CB;
+      font-size: 75%;
+      margin-bottom: 2px;
+      
+    }
+
+    .notif{
+      margin-top: -4.5px;
+      padding: 0;
+      color: #B8C3CB;
+      font-size: 75%;
+      margin-bottom: 2px;
+ 
+    }
+
+    .me{
+      margin-top: -3.5px;
+      padding: 0;
+      color: #B8C3CB;
+      font-size: 75%;
+      margin-bottom: 2px;
+     
+    
+    }
+    .network{
+      margin-top: -3px;
+      padding: 0;
+      color: #B8C3CB;
+      font-size: 75%;
+      margin-bottom: 2px;
+      
+    
+    }
+
+    * {
+  box-sizing: border-box;
+}
+
+
+    .main-box{
+      background-color: white;
+      margin: auto;
+      height: 120px;
+      width:560px;
+      border:1px #D3D3D3;
+      border-style: solid;
+      border-radius: 3px;
+      margin-top: 100px;
+      display: inline-block;
+       box-shadow: 0 1px 1px 1px #D3D3D3;
+       padding-right: 10px;
+       padding-left: 10px;
+      overflow: hidden;
+    }
+
+    #left-box{
+      background-color: white;
+      float: left;
+      margin-left: 35px;
+      margin-right: 20px;
+      height: 360px;
+      width:210px;
+      border:1px #D3D3D3;
+      border-style: solid;
+      border-radius: 3px;
+      margin-top: 100px;
+      display: inline-block;
+      box-shadow: 0 1px 1px 1px #D3D3D3;
+
+    }
+      #left-box2{
+      background-color: white;
+      float: left;
+      margin-left: 35px;
+      margin-right: 20px;
+      height: 300px;
+      width:210px;
+      border:1px #D3D3D3;
+      border-style: solid;
+      border-radius: 3px;
+      
+      display: inline-block;
+      box-shadow: 0 1px 1px 1px #D3D3D3;
+      position: relative;
+      top: -390px;
+
+    }
+
+    #right-box{
+       background-color: white;
+    float: right;
+      margin-right: 30px;
+    
+      height: 320px;
+      width:316px;
+      border:1px #D3D3D3;
+      border-style: solid;
+      border-radius: 3px;
+      position: relative;
+      top: 100px;
+      display: inline-block;
+      box-shadow: 0 1px 1px 1px #D3D3D3;
+    }
+
+      #right-box2{
+       background-color: white;
+      float: right;
+      
+      margin-right: 30px;
+     
+      height: 360px;
+      width:316px;
+      border:1px #D3D3D3;
+      border-style: solid;
+      border-radius: 3px;
+      position: relative;
+      top: -430px;
+    
+      box-shadow: 0 1px 1px 1px #D3D3D3;
+     
+    }
+
+    .box{
+      width: 1200px;
+      height: 1000px;
+      
+      border-color: 1px;
+      margin:auto;
+    }
+
+    #main-box2{
+      background-color: white;
+      margin: auto;
+      height: 570px;
+      width:560px;
+      border:1px #D3D3D3;
+      border-style: solid;
+      border-radius: 3px;
+      margin-top: 45px;
+      display: inline-block;
+       box-shadow: 0 1px 1px 1px #D3D3D3;
+       position: relative;
+      top: -40px;
+      padding: 15px;
+  
+    }
+   
+    #sort{
+       font-size: 80%;
+       color: #626262;
+    }
+
+
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+  margin: auto;
+}
+
+.column1{
+   float: left;
+  width: 20%;
+  padding: 5px;
+  margin: auto;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+
+}
+
+.row{
+  padding-left: 20px;
+}
+
+  #share{
+   margin-top: 15px; 
+   margin-left: 20px;
+   color: grey;
+  }
+
+  .text{
+    font-family: calibri;
+    position: relative;
+    top: -15px;
+    left: 5px;
+    font-size: 15px;
+   
+  }
+
+  .paragraph{
+    color: black;
+    font-size: 75%;
+  }
+
+  #kgp-photo{
+    width: 100%;
+  }
+
+  .column:hover .hover-icon {
+  opacity: 0.3;
+}
+
+ @media screen and (max-width: 600px) {
+ 
+  .box{
+    width: 100%;
+  }
+  .main-box{
+    
+    width: 100%;
+    
+    display: inline-block;
+    margin-top: 100px;
+  }
+
+  #main-box2{
+        width:  100%;
+        height: 75%;
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+
+  #line{
+    display: none;
+  }
+
+  #right-box2{
+    display: none;
+ }
+  #right-box{
+ display: none;
+ }
+  #left-box2{
+ display: none;
+ }
+  #left-box{
+  display: none;
+ }
+
+ #logo{
+  margin-left: 20px;
+ }
+
+ #topbar{
+  padding-left: 10px;
+ }
+
+ #search{
+  margin-right: 20px;
+ }
+
+ .hover{
+  display: none;
+ }
+
+ .topbar-item{
+  display: none;
+ }
+
+}
+  
+
+  </style>
+</head>
+ 
+<body>
+ 
+ <div id="topbar">
+    
+      <img src="images\logo1.png" id="logo">
+    <div >      
+      <input type="text" name="search" id="search" class="topbar-section" placeholder="Search">
+    </div>
+
+    <div class="topbar-section  ">
+      <img src="images\home1.png" class="topbar-item ">
+      <div class="icon-name hover">Home</div>
+    </div>
+
+     <div class="topbar-section ">
+      <img src="images\mynetwork.png" class="topbar-item">
+      <div class="network hover">My Network</div>
+    </div>
+
+     <div class="topbar-section ">
+      <img src="images\bag.png" class="topbar-item">
+      <div class="jobs hover">Jobs</div>
+    </div>
+
+     <div class="topbar-section">
+      <img src="images\message.png" class="topbar-item">
+      <div class="message hover ">Messaging</div>
+    </div>
+
+     <div class="topbar-section ">
+      <img src="images\new.png" class="topbar-item">
+      <div class="notif hover">Notification</div>
+    </div>
+
+     <div class="topbar-section ">
+      <img src="images\meIcon.png" class="topbar-item">
+      <div class="me hover">Me</div>
+    </div>
+
+     <div class="topbar-section ">
+      <img src="images\grid.png" class="topbar-item ">
+      <div class="icon-name hover">Work</div>
+    </div>
+    
+  </div>
+
+
+      <div class="box">
+          <div id="left-box"></div>
+            
+
+
+
+          
+          <div id="right-box"></div>
+          
+
+          <div>
+               <div class="main-box">
+                 <div id="share">
+                   <p>Start a Post</p>
+                 </div>
+                 <hr style="width: 540px; float: left;">
+                <div class="row">
+                      <div class="column">
+                        <img src="images\photo.png" class="hover-icon" style="width:70%;position: relative; top: -3px;">
+                      </div>
+                      <div class="column">
+                        <img src="images\video.png"class="hover-icon" style="width:80%">
+                      </div>
+                      <div class="column">
+                        <img src="images\article.png" class="hover-icon" style="width:100%;">
+                      </div>
+                        <div class="column">
+                        <img src="images\more.png" class="hover-icon" style="width:75%; position: relative; top: -3px;">
+                      </div>
+                  </div>
+                </div>
+              <div id="line">
+                      <div style="float:left; width: 40%;"><hr/></div>
+
+                     <div id="sort">Sort By:<b>Top</b><img style="width: 15px;" src="images\down-arrow.svg"></div>
+              </div>
+               
+                <div id="main-box2">
+                  <img src="images\kgp.png" style="width: 40px; float: left;">
+                    <div class="text">
+                      <ul style="list-style-type: none;">
+                        <li><strong>Indian Institute of Technology</strong></li>
+                        <li style="font-size: 80%; color: grey;">Kharagpur,West Bengal</li>
+                        <li style="font-size: 60%; color: grey;">Promoted</li>
+                      </ul>
+                    </div>
+
+                    <div class="paragraph">
+                      <p>The occasion of the National Doctors' Day is a matter of dual celebration at IIT Kharagpur. While we celebrate the modern Dhanvantaris and their contribution to our society, especially their relentless service at these trying times, today we also remember Dr. Bidhan Chandra Roy, the first Chairman of our Board of Governors, on his birth anniversary. I would take this opportunity to thank the entire medical team of our B C Roy Technology Hospital.<p>
+                    </div>
+
+                    <img src="images\kgp-photo.png" id="kgp-photo">
+                    <div style="float:left; width: 100%;"><hr/></div>
+
+                  <div class="row">
+                      <div class="column">
+                        <img src="images\like1.png"  class="hover-icon" style="width:50%;position: relative; top: -3px;">
+                      </div>
+                      <div class="column">
+                        <img src="images\comment.png" class="hover-icon" style="width:80%;position: relative; top: -3px; left: -50px;">
+                      </div>
+                      <div class="column">
+                        <img src="images\share.png" class="hover-icon" style="width:65%;position:relative; top: -5px;left: -60px;">
+                      </div>
+                      <div class="column">
+                        <img src="images\send.png" class="hover-icon" style="width:55%; position: relative; top: -3px;left: -90px;">
+                      </div>
+                  </div>
+                   
+
+
+                </div>
+
+
+          </div>
+          
+
+            
+            <div id="right-box2" ></div>
+
+          <div id="left-box2" ></div>
+     
+      </div>
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("topbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
